@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_15">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="jdk" jdkName="15" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:osgi.cmpn:7.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:osgi.core:7.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.aries.spec:org.apache.aries.javax.jax.rs-api:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-osgi-locator:1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" level="project" />
+    <orderEntry type="module" module-name="RPGTavernCore" scope="PROVIDED" />
+    <orderEntry type="module" module-name="RPGTavernPersistence" scope="PROVIDED" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-storage-embedded:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-storage:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-afs-nio:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-afs:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-base:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-persistence-binary:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: one.microstream:microstream-persistence:07.01.00-MS-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.karaf.features:org.apache.karaf.features.core:4.4.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.pax.url:pax-url-aether:2.6.11" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:jcl-over-slf4j:1.7.32" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.base:ops4j-base-util-property:1.5.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.base:ops4j-base-util-collections:1.5.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.base:ops4j-base-lang:1.5.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.ops4j.pax.swissbox:pax-swissbox-property:1.8.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.glassfish.jaxb:txw2:2.3.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.istack:istack-commons-runtime:3.0.11" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.activation:jakarta.activation:1.2.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.aries.jax.rs:org.apache.aries.jax.rs.jackson:1.0.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.service.jaxrs:1.0.0" level="project" />
+  </component>
+</module>

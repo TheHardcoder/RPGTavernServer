@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>RPGTavernServer</artifactId>
+        <groupId>de.byedev.rpgtavern</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>RPGTavernDist</artifactId>
+    <packaging>karaf-assembly</packaging>
+
+    <properties>
+        <karaf.version>4.4.1</karaf.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <!-- scope is compile so all features (there is only one) are installed into startup.properties and the feature repo itself is not added in etc/org.apache.karaf.features.cfg file -->
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>framework</artifactId>
+            <version>${karaf.version}</version>
+            <type>kar</type>
+        </dependency>
+        <dependency>
+            <!-- scope is runtime so the feature repo is listed in etc/org.apache.karaf.features.cfg file, and features will installed into the system directory if specify in the plugin configuration -->
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>standard</artifactId>
+            <classifier>features</classifier>
+            <version>${karaf.version}</version>
+            <type>xml</type>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.features</artifactId>
+            <version>2.0.1</version>
+            <type>xml</type>
+            <scope>runtime</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.sun.activation</groupId>-->
+<!--            <artifactId>jakarta.activation</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--            <version>1.2.2</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.cxf.karaf</groupId>
+            <artifactId>apache-cxf</artifactId>
+            <version>3.5.3</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>de.byedev.rpgtavern</groupId>
+            <artifactId>RPGTavernFeature</artifactId>
+            <version>${project.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+            <scope>runtime</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shiro</groupId>-->
+<!--            <artifactId>shiro-features</artifactId>-->
+<!--            <version>1.9.1</version>-->
+<!--            <type>xml</type>-->
+<!--            <classifier>features</classifier>-->
+<!--        </dependency>-->
+    </dependencies>
+
+    <build>
+        <!-- if you want to include resources in the distribution -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/filtered-resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>karaf-maven-plugin</artifactId>
+                <version>4.4.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <startupFeatures>
+                        <feature>standard</feature>
+                        <feature>aries-rsa-core</feature>
+                        <feature>aries-jax-rs-whiteboard</feature>
+                        <feature>aries-jax-rs-whiteboard-jackson</feature>
+                        <!--                        <feature>shiro-web</feature>-->
+                    </startupFeatures>
+                    <bootFeatures>
+<!--                        <feature>eventadmin</feature>-->
+                        <feature>scr</feature>
+                        <feature>wrapper</feature>
+                        <feature>cxf-core</feature>
+                        <feature>cxf-specs</feature>
+                        <feature>cxf-jaxrs</feature>
+                        <feature>cxf-jaxb</feature>
+                        <feature>cxf-databinding-jaxb</feature>
+                        <feature>cxf-dosgi-provider-cxf</feature>
+                        <!--                        <feature>eventadmin</feature>-->
+
+                        <feature>RPGTavernFeature</feature>
+                    </bootFeatures>
+                    <installedFeatures>
+                        <feature>webconsole</feature>
+                    </installedFeatures>
+                    <addTransitiveFeatures>false</addTransitiveFeatures>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
